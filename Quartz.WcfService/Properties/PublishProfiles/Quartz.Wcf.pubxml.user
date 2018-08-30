@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Joson\Desktop\WCF</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Data/EmailServerConfig.xml">
+      <publishTime>11/30/2015 11:01:51</publishTime>
+    </File>
+    <File Include="bin/C5.dll">
+      <publishTime>11/02/2014 09:20:04</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>10/28/2015 12:32:09</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>10/28/2015 12:32:09</publishTime>
+    </File>
+    <File Include="bin/ISchedulers.ScheduleJob.dll">
+      <publishTime>01/16/2016 16:46:47</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.Edm.dll">
+      <publishTime>11/16/2015 16:32:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.OData.dll">
+      <publishTime>11/16/2015 16:32:33</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.Services.Client.dll">
+      <publishTime>11/16/2015 16:32:33</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.Services.dll">
+      <publishTime>11/16/2015 16:32:35</publishTime>
+    </File>
+    <File Include="bin/Net.Common.dll">
+      <publishTime>12/03/2015 10:15:29</publishTime>
+    </File>
+    <File Include="bin/Net.DBUtility.dll">
+      <publishTime>12/11/2015 13:19:12</publishTime>
+    </File>
+    <File Include="bin/Quartz.dll">
+      <publishTime>10/08/2015 11:03:47</publishTime>
+    </File>
+    <File Include="bin/Quartz.Entity.dll">
+      <publishTime>01/16/2016 16:46:43</publishTime>
+    </File>
+    <File Include="bin/Quartz.WcfService.dll">
+      <publishTime>01/16/2016 16:46:48</publishTime>
+    </File>
+    <File Include="bin/Senparc.Weixin.BLL.dll">
+      <publishTime>01/16/2016 16:46:45</publishTime>
+    </File>
+    <File Include="bin/Senparc.Weixin.DAL.dll">
+      <publishTime>01/16/2016 16:46:45</publishTime>
+    </File>
+    <File Include="bin/Senparc.Weixin.dll">
+      <publishTime>01/06/2016 10:26:40</publishTime>
+    </File>
+    <File Include="bin/Senparc.Weixin.IBLL.dll">
+      <publishTime>01/16/2016 16:46:44</publishTime>
+    </File>
+    <File Include="bin/Senparc.Weixin.IDAL.dll">
+      <publishTime>01/16/2016 16:46:43</publishTime>
+    </File>
+    <File Include="bin/Senparc.Weixin.MP.dll">
+      <publishTime>01/06/2016 10:26:40</publishTime>
+    </File>
+    <File Include="bin/System.Data.SQLite.dll">
+      <publishTime>03/19/2014 13:51:42</publishTime>
+    </File>
+    <File Include="bin/System.Spatial.dll">
+      <publishTime>11/16/2015 16:32:30</publishTime>
+    </File>
+    <File Include="bin/Topshelf.dll">
+      <publishTime>06/30/2015 23:37:39</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/EntityFramework.resources.dll">
+      <publishTime>10/28/2015 12:33:22</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/EntityFramework.SqlServer.resources.dll">
+      <publishTime>10/28/2015 12:33:22</publishTime>
+    </File>
+    <File Include="JosonService.svc">
+      <publishTime>11/17/2015 19:15:21</publishTime>
+    </File>
+    <File Include="JosonServices.svc">
+      <publishTime>11/25/2015 16:24:48</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>12/13/2015 17:37:49</publishTime>
+    </File>
+    <File Include="Service-Ajax.svc">
+      <publishTime>11/16/2015 16:38:51</publishTime>
+    </File>
+    <File Include="Services.svc">
+      <publishTime>11/16/2015 18:15:09</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/16/2016 16:46:48</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

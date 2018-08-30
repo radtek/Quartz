@@ -1,0 +1,3 @@
+发生时间: 文件“C:\Users\Joson\Desktop\Quartz\Quartz.Console\bin\Debug\log\Joson.txt”正由另一进程使用，因此该进程无法访问此文件。2016/4/20 10:21:37
+---------------------------------------------
+

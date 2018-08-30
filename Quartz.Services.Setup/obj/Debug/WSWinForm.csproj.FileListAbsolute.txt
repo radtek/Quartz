@@ -1,0 +1,9 @@
+C:\Users\Joson\Desktop\TaskManager-master\WSWinForm\bin\Debug\WSWinForm.exe.config
+C:\Users\Joson\Desktop\TaskManager-master\WSWinForm\bin\Debug\WSWinForm.exe
+C:\Users\Joson\Desktop\TaskManager-master\WSWinForm\bin\Debug\WSWinForm.pdb
+C:\Users\Joson\Desktop\TaskManager-master\WSWinForm\obj\Debug\WSWinForm.csprojResolveAssemblyReference.cache
+C:\Users\Joson\Desktop\TaskManager-master\WSWinForm\obj\Debug\WSWinForm.FrmMain.resources
+C:\Users\Joson\Desktop\TaskManager-master\WSWinForm\obj\Debug\WSWinForm.Properties.Resources.resources
+C:\Users\Joson\Desktop\TaskManager-master\WSWinForm\obj\Debug\WSWinForm.csproj.GenerateResource.Cache
+C:\Users\Joson\Desktop\TaskManager-master\WSWinForm\obj\Debug\WSWinForm.exe
+C:\Users\Joson\Desktop\TaskManager-master\WSWinForm\obj\Debug\WSWinForm.pdb

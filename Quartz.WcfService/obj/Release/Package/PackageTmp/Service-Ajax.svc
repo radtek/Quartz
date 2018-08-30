@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Quartz.WcfService.Service" CodeBehind="Service-Ajax.svc.cs" %>

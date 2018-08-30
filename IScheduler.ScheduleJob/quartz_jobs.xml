@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file contains job definitions in schema version 2.0 format -->
+
+<job-scheduling-data xmlns="http://quartznet.sourceforge.net/JobSchedulingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+
+  <processing-directives>
+    <overwrite-existing-data>true</overwrite-existing-data>
+  </processing-directives>
+
+  <schedule>
+
+    <!--划扣银行卡 任务配置-->
+    
+    <!---->
+    
+    <job>
+      <name>BankCardJob</name>
+      <group>BankCard</group>
+      <description>划扣银行卡</description>
+      <job-type>ISchedulers.ScheduleJob.BankCardJob,ISchedulers.ScheduleJob</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>BankCardJobTrigger</name>
+        <group>BankCard</group>
+        <job-name>BankCardJob</job-name>
+        <job-group>BankCard</job-group>
+        <start-time>2015-09-22T00:00:00+08:00</start-time>
+        <cron-expression>0/6 * * * * ?</cron-expression>
+      </cron>
+    </trigger>
+    
+    
+
+    <!--TestJob测试 任务配置-->
+    <job>
+      <name>TestJob</name>
+      <group>Test</group>
+      <description>TestJob测试</description>
+      <job-type>ISchedulers.ScheduleJob.TestJob,ISchedulers.ScheduleJob</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>TestJobTrigger</name>
+        <group>Test</group>
+        <job-name>TestJob</job-name>
+        <job-group>Test</job-group>
+        <start-time>2015-10-09T11:09:00+08:00</start-time>
+        <cron-expression>0/3 * * * * ?</cron-expression>
+      </cron>
+    </trigger>
+
+    <!--SendMsgJob 任务配置-->
+    <job>
+      <name>SendMsgJob</name>
+      <group>SendMsg</group>
+      <description>SendMsg</description>
+      <job-type>ISchedulers.ScheduleJob.SendMsgJob,ISchedulers.ScheduleJob</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>SendMsgJobTrigger</name>
+        <group>SendMsg</group>
+        <job-name>SendMsgJob</job-name>
+        <job-group>SendMsg</job-group>
+        <start-time>2015-10-09T11:09:00+08:00</start-time>
+        <cron-expression>0/13 * * * * ?</cron-expression>
+      </cron>
+    </trigger>
+
+
+    <!--DataUpdateJob  任务配置-->
+    <job>
+      <name>DataUpdateJob</name>
+      <group>DataUpdate</group>
+      <description>DataUpdate测试</description>
+      <job-type>ISchedulers.ScheduleJob.DataUpdateJob,ISchedulers.ScheduleJob</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>DataUpdateJobTrigger</name>
+        <group>DataUpdate</group>
+        <job-name>DataUpdateJob</job-name>
+        <job-group>DataUpdate</job-group>
+        <start-time>2015-10-09T11:09:00+08:00</start-time>
+        <cron-expression>0/8 * * * * ?</cron-expression>
+      </cron>
+    </trigger>
+    
+    
+  </schedule>
+</job-scheduling-data>

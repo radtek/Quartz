@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JosonSenparcModelStoreContainer" CdmEntityContainer="JosonSenparcEntities">
+    <EntitySetMapping Name="BPMProcNotifyRec">
+      <EntityTypeMapping TypeName="JosonSenparcModel.BPMProcNotifyRec">
+        <MappingFragment StoreEntitySet="BPMProcNotifyRec">
+          <ScalarProperty Name="NTYPE" ColumnName="NTYPE" />
+          <ScalarProperty Name="NOTIFYUNAME" ColumnName="NOTIFYUNAME" />
+          <ScalarProperty Name="NOTIFYUSER" ColumnName="NOTIFYUSER" />
+          <ScalarProperty Name="MSGID" ColumnName="MSGID" />
+          <ScalarProperty Name="STEPID" ColumnName="STEPID" />
+          <ScalarProperty Name="FLOWNO" ColumnName="FLOWNO" />
+          <ScalarProperty Name="PROCNAME" ColumnName="PROCNAME" />
+          <ScalarProperty Name="NODENAME" ColumnName="NODENAME" />
+          <ScalarProperty Name="OPDEPT" ColumnName="OPDEPT" />
+          <ScalarProperty Name="OWNERCOUNT" ColumnName="OWNERCOUNT" />
+          <ScalarProperty Name="OWNERNAME" ColumnName="OWNERNAME" />
+          <ScalarProperty Name="RECEIVEAT" ColumnName="RECEIVEAT" />
+          <ScalarProperty Name="EXPWORKTIME" ColumnName="EXPWORKTIME" />
+          <ScalarProperty Name="NOTIFYHOUR" ColumnName="NOTIFYHOUR" />
+          <ScalarProperty Name="NOTIFYCOUNT" ColumnName="NOTIFYCOUNT" />
+          <ScalarProperty Name="LASTTIME" ColumnName="LASTTIME" />
+          <ScalarProperty Name="OPSTATUS" ColumnName="OPSTATUS" />
+          <ScalarProperty Name="CREATETIME" ColumnName="CREATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BPMProcNotifyRecHis">
+      <EntityTypeMapping TypeName="JosonSenparcModel.BPMProcNotifyRecHis">
+        <MappingFragment StoreEntitySet="BPMProcNotifyRecHis">
+          <ScalarProperty Name="NTYPE" ColumnName="NTYPE" />
+          <ScalarProperty Name="NOTIFYUNAME" ColumnName="NOTIFYUNAME" />
+          <ScalarProperty Name="NOTIFYUSER" ColumnName="NOTIFYUSER" />
+          <ScalarProperty Name="MSGID" ColumnName="MSGID" />
+          <ScalarProperty Name="STEPID" ColumnName="STEPID" />
+          <ScalarProperty Name="FLOWNO" ColumnName="FLOWNO" />
+          <ScalarProperty Name="PROCNAME" ColumnName="PROCNAME" />
+          <ScalarProperty Name="NODENAME" ColumnName="NODENAME" />
+          <ScalarProperty Name="OPDEPT" ColumnName="OPDEPT" />
+          <ScalarProperty Name="OWNERCOUNT" ColumnName="OWNERCOUNT" />
+          <ScalarProperty Name="OWNERNAME" ColumnName="OWNERNAME" />
+          <ScalarProperty Name="RECEIVEAT" ColumnName="RECEIVEAT" />
+          <ScalarProperty Name="EXPWORKTIME" ColumnName="EXPWORKTIME" />
+          <ScalarProperty Name="NOTIFYHOUR" ColumnName="NOTIFYHOUR" />
+          <ScalarProperty Name="NOTIFYCOUNT" ColumnName="NOTIFYCOUNT" />
+          <ScalarProperty Name="LASTTIME" ColumnName="LASTTIME" />
+          <ScalarProperty Name="OPSTATUS" ColumnName="OPSTATUS" />
+          <ScalarProperty Name="CREATETIME" ColumnName="CREATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BPMSysMessagesQueue">
+      <EntityTypeMapping TypeName="JosonSenparcModel.BPMSysMessagesQueue">
+        <MappingFragment StoreEntitySet="BPMSysMessagesQueue">
+          <ScalarProperty Name="Attachments" ColumnName="Attachments" />
+          <ScalarProperty Name="FailCount" ColumnName="FailCount" />
+          <ScalarProperty Name="LastSendAt" ColumnName="LastSendAt" />
+          <ScalarProperty Name="CreateAt" ColumnName="CreateAt" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ProviderName" ColumnName="ProviderName" />
+          <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LocationUser">
+      <EntityTypeMapping TypeName="JosonSenparcModel.LocationUser">
+        <MappingFragment StoreEntitySet="LocationUser">
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="Precision" ColumnName="Precision" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="OpenID" ColumnName="OpenID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubscribeUsers">
+      <EntityTypeMapping TypeName="JosonSenparcModel.SubscribeUsers">
+        <MappingFragment StoreEntitySet="SubscribeUsers">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="IsPbulic" ColumnName="IsPbulic" />
+          <ScalarProperty Name="ImgSrc" ColumnName="ImgSrc" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="UnionID" ColumnName="UnionID" />
+          <ScalarProperty Name="OpenID" ColumnName="OpenID" />
+          <ScalarProperty Name="SubscribeDate" ColumnName="SubscribeDate" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BPMSysSettings">
+      <EntityTypeMapping TypeName="JosonSenparcModel.BPMSysSettings">
+        <MappingFragment StoreEntitySet="BPMSysSettings">
+          <ScalarProperty Name="ItemValue" ColumnName="ItemValue" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BPMSysMessagesFailed">
+      <EntityTypeMapping TypeName="JosonSenparcModel.BPMSysMessagesFailed">
+        <MappingFragment StoreEntitySet="BPMSysMessagesFailed">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Attachments" ColumnName="Attachments" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+          <ScalarProperty Name="RemoveAt" ColumnName="RemoveAt" />
+          <ScalarProperty Name="FailCount" ColumnName="FailCount" />
+          <ScalarProperty Name="CreateAt" ColumnName="CreateAt" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ProviderName" ColumnName="ProviderName" />
+          <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BPMSysMessagesSucceed">
+      <EntityTypeMapping TypeName="JosonSenparcModel.BPMSysMessagesSucceed">
+        <MappingFragment StoreEntitySet="BPMSysMessagesSucceed">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Attachments" ColumnName="Attachments" />
+          <ScalarProperty Name="SendAt" ColumnName="SendAt" />
+          <ScalarProperty Name="CreateAt" ColumnName="CreateAt" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ProviderName" ColumnName="ProviderName" />
+          <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

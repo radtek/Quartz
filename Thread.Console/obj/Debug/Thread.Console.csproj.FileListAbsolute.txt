@@ -1,0 +1,9 @@
+C:\Users\Joson\Desktop\Quartz\Thread.Console\bin\Debug\Thread.Console.exe
+C:\Users\Joson\Desktop\Quartz\Thread.Console\bin\Debug\Thread.Console.pdb
+C:\Users\Joson\Desktop\Quartz\Thread.Console\obj\Debug\Thread.Console.csprojResolveAssemblyReference.cache
+C:\Users\Joson\Desktop\Quartz\Thread.Console\obj\Debug\Thread.Console.exe
+C:\Users\Joson\Desktop\Quartz\Thread.Console\obj\Debug\Thread.Console.pdb
+E:\Joson\系统桌面\Quartz\Thread.Console\bin\Debug\Thread.Console.exe
+E:\Joson\系统桌面\Quartz\Thread.Console\bin\Debug\Thread.Console.pdb
+E:\Joson\系统桌面\Quartz\Thread.Console\obj\Debug\Thread.Console.exe
+E:\Joson\系统桌面\Quartz\Thread.Console\obj\Debug\Thread.Console.pdb

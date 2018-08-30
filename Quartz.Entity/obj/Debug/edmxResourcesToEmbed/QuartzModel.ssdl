@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JosonSenparcModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="JosonSenparcModelStoreContainer">
+    <EntitySet Name="BPMProcNotifyRec" EntityType="JosonSenparcModel.Store.BPMProcNotifyRec" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BPMProcNotifyRecHis" EntityType="JosonSenparcModel.Store.BPMProcNotifyRecHis" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BPMSysMessagesFailed" EntityType="JosonSenparcModel.Store.BPMSysMessagesFailed" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BPMSysMessagesQueue" EntityType="JosonSenparcModel.Store.BPMSysMessagesQueue" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BPMSysMessagesSucceed" EntityType="JosonSenparcModel.Store.BPMSysMessagesSucceed" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BPMSysSettings" EntityType="JosonSenparcModel.Store.BPMSysSettings" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LocationUser" EntityType="JosonSenparcModel.Store.LocationUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SubscribeUsers" EntityType="JosonSenparcModel.Store.SubscribeUsers" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_SubscribeUsers_Location" Association="JosonSenparcModel.Store.FK_SubscribeUsers_Location">
+      <End Role="SubscribeUsers" EntitySet="SubscribeUsers" />
+      <End Role="LocationUser" EntitySet="LocationUser" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BPMProcNotifyRec">
+    <Key>
+      <PropertyRef Name="MSGID" />
+    </Key>
+    <Property Name="MSGID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="STEPID" Type="bigint" Nullable="false" />
+    <Property Name="FLOWNO" Type="varchar" MaxLength="200" />
+    <Property Name="PROCNAME" Type="varchar" MaxLength="200" />
+    <Property Name="NODENAME" Type="varchar" MaxLength="200" />
+    <Property Name="OPDEPT" Type="varchar" MaxLength="200" />
+    <Property Name="OWNERCOUNT" Type="varchar" MaxLength="64" />
+    <Property Name="OWNERNAME" Type="varchar" MaxLength="64" />
+    <Property Name="NOTIFYUSER" Type="varchar" MaxLength="64" />
+    <Property Name="NOTIFYUNAME" Type="varchar" MaxLength="64" />
+    <Property Name="RECEIVEAT" Type="datetime" />
+    <Property Name="EXPWORKTIME" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="NOTIFYHOUR" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="NOTIFYCOUNT" Type="smallint" />
+    <Property Name="NTYPE" Type="smallint" />
+    <Property Name="LASTTIME" Type="datetime" />
+    <Property Name="OPSTATUS" Type="smallint" />
+    <Property Name="CREATETIME" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BPMProcNotifyRecHis">
+    <Key>
+      <PropertyRef Name="MSGID" />
+    </Key>
+    <Property Name="MSGID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="STEPID" Type="bigint" Nullable="false" />
+    <Property Name="FLOWNO" Type="varchar" MaxLength="200" />
+    <Property Name="PROCNAME" Type="varchar" MaxLength="200" />
+    <Property Name="NODENAME" Type="varchar" MaxLength="200" />
+    <Property Name="OPDEPT" Type="varchar" MaxLength="200" />
+    <Property Name="OWNERCOUNT" Type="varchar" MaxLength="64" />
+    <Property Name="OWNERNAME" Type="varchar" MaxLength="64" />
+    <Property Name="NOTIFYUSER" Type="varchar" MaxLength="64" />
+    <Property Name="NOTIFYUNAME" Type="varchar" MaxLength="64" />
+    <Property Name="RECEIVEAT" Type="datetime" />
+    <Property Name="EXPWORKTIME" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="NOTIFYHOUR" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="NOTIFYCOUNT" Type="smallint" />
+    <Property Name="NTYPE" Type="smallint" />
+    <Property Name="LASTTIME" Type="datetime" />
+    <Property Name="OPSTATUS" Type="smallint" />
+    <Property Name="CREATETIME" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BPMSysMessagesFailed">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="MessageID" Type="int" Nullable="false" />
+    <Property Name="ProviderName" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="1000" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Message" Type="ntext" />
+    <Property Name="CreateAt" Type="datetime" Nullable="false" />
+    <Property Name="FailCount" Type="int" Nullable="false" />
+    <Property Name="RemoveAt" Type="datetime" Nullable="false" />
+    <Property Name="Error" Type="ntext" />
+    <Property Name="Attachments" Type="ntext" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="BPMSysMessagesQueue">
+    <Key>
+      <PropertyRef Name="MessageID" />
+    </Key>
+    <Property Name="MessageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProviderName" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="1000" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Message" Type="nvarchar(max)" />
+    <Property Name="CreateAt" Type="datetime" Nullable="false" />
+    <Property Name="LastSendAt" Type="datetime" />
+    <Property Name="FailCount" Type="int" Nullable="false" />
+    <Property Name="Attachments" Type="ntext" />
+  </EntityType>
+  <EntityType Name="BPMSysMessagesSucceed">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="MessageID" Type="int" Nullable="false" />
+    <Property Name="ProviderName" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="1000" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Message" Type="nvarchar(max)" />
+    <Property Name="CreateAt" Type="datetime" Nullable="false" />
+    <Property Name="SendAt" Type="datetime" Nullable="false" />
+    <Property Name="Attachments" Type="ntext" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="BPMSysSettings">
+    <Key>
+      <PropertyRef Name="ItemName" />
+    </Key>
+    <Property Name="ItemName" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="ItemValue" Type="ntext" />
+  </EntityType>
+  <EntityType Name="LocationUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OpenID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="Latitude" Type="float" />
+    <Property Name="Longitude" Type="float" />
+    <Property Name="Precision" Type="float" />
+    <Property Name="Event" Type="int" />
+  </EntityType>
+  <EntityType Name="SubscribeUsers">
+    <Key>
+      <PropertyRef Name="OpenID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmpID" Type="nvarchar" MaxLength="20" />
+    <Property Name="SubscribeDate" Type="datetime" />
+    <Property Name="OpenID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UnionID" Type="nvarchar" MaxLength="50" />
+    <Property Name="NickName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="Province" Type="nvarchar" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="GroupID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Language" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sex" Type="nchar" MaxLength="1" />
+    <Property Name="ImgSrc" Type="nvarchar(max)" />
+    <Property Name="IsPbulic" Type="bit" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_SubscribeUsers_Location">
+    <End Role="SubscribeUsers" Type="JosonSenparcModel.Store.SubscribeUsers" Multiplicity="1" />
+    <End Role="LocationUser" Type="JosonSenparcModel.Store.LocationUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubscribeUsers">
+        <PropertyRef Name="OpenID" />
+      </Principal>
+      <Dependent Role="LocationUser">
+        <PropertyRef Name="OpenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

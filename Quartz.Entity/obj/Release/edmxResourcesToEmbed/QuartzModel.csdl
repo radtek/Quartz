@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JosonSenparcModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="JosonSenparcEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="BPMProcNotifyRec" EntityType="JosonSenparcModel.BPMProcNotifyRec" />
+    <EntitySet Name="BPMProcNotifyRecHis" EntityType="JosonSenparcModel.BPMProcNotifyRecHis" />
+    <EntitySet Name="BPMSysMessagesQueue" EntityType="JosonSenparcModel.BPMSysMessagesQueue" />
+    <EntitySet Name="LocationUser" EntityType="JosonSenparcModel.LocationUser" />
+    <EntitySet Name="SubscribeUsers" EntityType="JosonSenparcModel.SubscribeUsers" />
+    <AssociationSet Name="FK_SubscribeUsers_Location" Association="JosonSenparcModel.FK_SubscribeUsers_Location">
+      <End Role="SubscribeUsers" EntitySet="SubscribeUsers" />
+      <End Role="LocationUser" EntitySet="LocationUser" />
+    </AssociationSet>
+    <EntitySet Name="BPMSysSettings" EntityType="JosonSenparcModel.BPMSysSettings" />
+    <EntitySet Name="BPMSysMessagesFailed" EntityType="JosonSenparcModel.BPMSysMessagesFailed" />
+    <EntitySet Name="BPMSysMessagesSucceed" EntityType="JosonSenparcModel.BPMSysMessagesSucceed" />
+  </EntityContainer>
+  <EntityType Name="BPMProcNotifyRec">
+    <Key>
+      <PropertyRef Name="MSGID" />
+    </Key>
+    <Property Name="MSGID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="STEPID" Type="Int64" Nullable="false" />
+    <Property Name="FLOWNO" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PROCNAME" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="NODENAME" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="OPDEPT" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="OWNERCOUNT" Type="String" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="OWNERNAME" Type="String" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="RECEIVEAT" Type="DateTime" Precision="3" />
+    <Property Name="EXPWORKTIME" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="NOTIFYHOUR" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="NOTIFYCOUNT" Type="Int16" />
+    <Property Name="LASTTIME" Type="DateTime" Precision="3" />
+    <Property Name="OPSTATUS" Type="Int16" />
+    <Property Name="CREATETIME" Type="DateTime" Precision="3" />
+    <Property Type="String" Name="NOTIFYUSER" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOTIFYUNAME" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="NTYPE" />
+  </EntityType>
+  <EntityType Name="BPMProcNotifyRecHis">
+    <Key>
+      <PropertyRef Name="MSGID" />
+    </Key>
+    <Property Name="MSGID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="STEPID" Type="Int64" Nullable="false" />
+    <Property Name="FLOWNO" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PROCNAME" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="NODENAME" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="OPDEPT" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="OWNERCOUNT" Type="String" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="OWNERNAME" Type="String" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="RECEIVEAT" Type="DateTime" Precision="3" />
+    <Property Name="EXPWORKTIME" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="NOTIFYHOUR" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="NOTIFYCOUNT" Type="Int16" />
+    <Property Name="LASTTIME" Type="DateTime" Precision="3" />
+    <Property Name="OPSTATUS" Type="Int16" />
+    <Property Name="CREATETIME" Type="DateTime" Precision="3" />
+    <Property Type="String" Name="NOTIFYUSER" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOTIFYUNAME" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="NTYPE" />
+  </EntityType>
+  <EntityType Name="BPMSysMessagesQueue">
+    <Key>
+      <PropertyRef Name="MessageID" />
+    </Key>
+    <Property Type="Int32" Name="MessageID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ProviderName" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Title" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Message" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateAt" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="LastSendAt" Precision="3" />
+    <Property Type="Int32" Name="FailCount" Nullable="false" />
+    <Property Type="String" Name="Attachments" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LocationUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="OpenID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateTime" Precision="3" />
+    <Property Type="Double" Name="Latitude" />
+    <Property Type="Double" Name="Longitude" />
+    <Property Type="Double" Name="Precision" />
+    <Property Type="Int32" Name="Event" />
+    <NavigationProperty Name="SubscribeUsers" Relationship="JosonSenparcModel.FK_SubscribeUsers_Location" FromRole="LocationUser" ToRole="SubscribeUsers" />
+  </EntityType>
+  <EntityType Name="SubscribeUsers">
+    <Key>
+      <PropertyRef Name="OpenID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EmpID" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="SubscribeDate" Precision="3" />
+    <Property Type="String" Name="OpenID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UnionID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NickName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remark" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Province" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GroupID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Language" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Sex" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="ImgSrc" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsPbulic" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LocationUser" Relationship="JosonSenparcModel.FK_SubscribeUsers_Location" FromRole="SubscribeUsers" ToRole="LocationUser" />
+  </EntityType>
+  <Association Name="FK_SubscribeUsers_Location">
+    <End Type="JosonSenparcModel.SubscribeUsers" Role="SubscribeUsers" Multiplicity="1" />
+    <End Type="JosonSenparcModel.LocationUser" Role="LocationUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubscribeUsers">
+        <PropertyRef Name="OpenID" />
+      </Principal>
+      <Dependent Role="LocationUser">
+        <PropertyRef Name="OpenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="BPMSysSettings">
+    <Key>
+      <PropertyRef Name="ItemName" />
+    </Key>
+    <Property Type="String" Name="ItemName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BPMSysMessagesFailed">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="MessageID" Nullable="false" />
+    <Property Type="String" Name="ProviderName" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Title" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Message" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateAt" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="FailCount" Nullable="false" />
+    <Property Type="DateTime" Name="RemoveAt" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Error" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Attachments" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="BPMSysMessagesSucceed">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="MessageID" Nullable="false" />
+    <Property Type="String" Name="ProviderName" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Title" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Message" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateAt" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="SendAt" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Attachments" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

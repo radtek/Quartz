@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2f22c56857124cd082ee41d6850e0141" Name="关系图1" ZoomLevel="94">
+        <EntityTypeShape EntityType="JosonSenparcModel.BPMProcNotifyRec" Width="1.5" PointX="10.625" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JosonSenparcModel.BPMProcNotifyRecHis" Width="1.5" PointX="8.375" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JosonSenparcModel.BPMSysMessagesQueue" Width="1.625" PointX="5.5" PointY="6" />
+        <EntityTypeShape EntityType="JosonSenparcModel.LocationUser" Width="1.5" PointX="4.875" PointY="0.875" />
+        <EntityTypeShape EntityType="JosonSenparcModel.SubscribeUsers" Width="1.5" PointX="2.125" PointY="0.875" />
+        <AssociationConnector Association="JosonSenparcModel.FK_SubscribeUsers_Location" />
+        <EntityTypeShape EntityType="JosonSenparcModel.BPMSysSettings" Width="1.5" PointX="7.5" PointY="6" />
+        <EntityTypeShape EntityType="JosonSenparcModel.BPMSysMessagesFailed" Width="1.625" PointX="1.375" PointY="6" />
+        <EntityTypeShape EntityType="JosonSenparcModel.BPMSysMessagesSucceed" Width="1.5" PointX="3.5" PointY="6" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

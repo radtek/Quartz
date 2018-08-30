@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<siteConfig>
+  <WebConfig>
+    <ID>1</ID>
+    <ServerSet>mail.skyworth.com</ServerSet>
+    <UserName>bpmserver@skyworth.com</UserName>
+    <ServerMail>bpmserver@skyworth.com</ServerMail>
+    <MailPassWord>Hello@Sky..2014</MailPassWord>
+    <CreateTime>2015-11-30 14:25:51</CreateTime>
+  </WebConfig>
+  <WebConfig>
+    <ID>2</ID>
+    <ServerSet>smtp.skyworth.com</ServerSet>
+    <UserName>bpmserver</UserName>
+    <ServerMail>bpmserver@skyworth.com</ServerMail>
+    <MailPassWord>Hello@Sky..2014</MailPassWord>
+    <CreateTime>2015-11-30 14:09:10</CreateTime>
+  </WebConfig>
+</siteConfig>
